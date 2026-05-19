@@ -21,12 +21,10 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: |
             --model claude-sonnet-4-6
             --effort medium
             --dangerously-skip-permissions
-          show_full_output: true
           prompt: |
             Review the changes in pull request ${{ github.repository }}/pull/${{ github.event.pull_request.number }}.
             Post your findings as inline PR review comments where possible.
