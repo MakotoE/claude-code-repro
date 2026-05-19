@@ -22,4 +22,5 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            Hello
+            Review the changes in pull request ${{ github.repository }}/pull/${{ github.event.pull_request.number }}.
+            Post your findings as inline PR review comments where possible.
