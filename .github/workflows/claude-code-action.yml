@@ -27,3 +27,4 @@ jobs:
           prompt: |
             Review the changes in pull request ${{ github.repository }}/pull/${{ github.event.pull_request.number }}.
             Post your findings as inline PR review comments where possible.
+            If there are no issues, write a comment in the PR confirming that the code looks good.
