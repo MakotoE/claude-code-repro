@@ -20,5 +20,6 @@ jobs:
         id: claude-review
         uses: anthropics/claude-code-action@v1
         with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
             Hello
